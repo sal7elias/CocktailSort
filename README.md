@@ -11,7 +11,8 @@
 
 ## Implementation-Cocktail Sort
 
-<br>
+
+``` cpp
 #include<iostream>
 using namespace std;
 using namespace std;
@@ -84,7 +85,7 @@ int main()
 	return 0;
 }
 
-
+```
 
 
 ### Output: 
@@ -93,47 +94,47 @@ int main()
  
 
 ## Example-Cocktail sort: 
+<br>
+Let us consider an example array (5 1 4 2 8 0 2)<br>
+First Forward Pass: <br>
+(5 1 4 2 8 0 2) ? (1 5 4 2 8 0 2), Swap since 5 > 1 <br>
+(1 5 4 2 8 0 2) ? (1 4 5 2 8 0 2), Swap since 5 > 4 <br>
+(1 4 5 2 8 0 2) ? (1 4 2 5 8 0 2), Swap since 5 > 2 <br>
+(1 4 2 5 8 0 2) ? (1 4 2 5 8 0 2) <br>
+(1 4 2 5 8 0 2) ? (1 4 2 5 0 8 2), Swap since 8 > 0 <br>
+(1 4 2 5 0 8 2) ? (1 4 2 5 0 2 8), Swap since 8 > 2<br>
+After first forward pass, greatest element of the array will be present at the last index of array.<br>
+First Backward Pass: <br>
+(1 4 2 5 0 2 8) ? (1 4 2 5 0 2 8) <br>
+(1 4 2 5 0 2 8) ? (1 4 2 0 5 2 8), Swap since 5 > 0 <br>
+(1 4 2 0 5 2 8) ? (1 4 0 2 5 2 8), Swap since 2 > 0 <br>
+(1 4 0 2 5 2 8) ? (1 0 4 2 5 2 8), Swap since 4 > 0 <br>
+(1 0 4 2 5 2 8) ? (0 1 4 2 5 2 8), Swap since 1 > 0<br>
+After first backward pass, smallest element of the array will be present at the first index of the array.<br>
 
-Let us consider an example array (5 1 4 2 8 0 2)
-First Forward Pass: 
-(5 1 4 2 8 0 2) ? (1 5 4 2 8 0 2), Swap since 5 > 1 
-(1 5 4 2 8 0 2) ? (1 4 5 2 8 0 2), Swap since 5 > 4 
-(1 4 5 2 8 0 2) ? (1 4 2 5 8 0 2), Swap since 5 > 2 
-(1 4 2 5 8 0 2) ? (1 4 2 5 8 0 2) 
-(1 4 2 5 8 0 2) ? (1 4 2 5 0 8 2), Swap since 8 > 0 
-(1 4 2 5 0 8 2) ? (1 4 2 5 0 2 8), Swap since 8 > 2
-After first forward pass, greatest element of the array will be present at the last index of array.
-First Backward Pass: 
-(1 4 2 5 0 2 8) ? (1 4 2 5 0 2 8) 
-(1 4 2 5 0 2 8) ? (1 4 2 0 5 2 8), Swap since 5 > 0 
-(1 4 2 0 5 2 8) ? (1 4 0 2 5 2 8), Swap since 2 > 0 
-(1 4 0 2 5 2 8) ? (1 0 4 2 5 2 8), Swap since 4 > 0 
-(1 0 4 2 5 2 8) ? (0 1 4 2 5 2 8), Swap since 1 > 0
-After first backward pass, smallest element of the array will be present at the first index of the array.
-
-Second Forward Pass: 
-(0 1 4 2 5 2 8) ? (0 1 4 2 5 2 8) 
-(0 1 4 2 5 2 8) ? (0 1 2 4 5 2 8), Swap since 4 > 2 
-(0 1 2 4 5 2 8) ? (0 1 2 4 5 2 8) 
-(0 1 2 4 5 2 8) ? (0 1 2 4 2 5 8), Swap since 5 > 2
-Second Backward Pass: 
-(0 1 2 4 2 5 8) ? (0 1 2 2 4 5 8), Swap since 4 > 2
+Second Forward Pass: <br>
+(0 1 4 2 5 2 8) ? (0 1 4 2 5 2 8) <br>
+(0 1 4 2 5 2 8) ? (0 1 2 4 5 2 8), Swap since 4 > 2 <br>
+(0 1 2 4 5 2 8) ? (0 1 2 4 5 2 8) <br>
+(0 1 2 4 5 2 8) ? (0 1 2 4 2 5 8), Swap since 5 > 2<br>
+Second Backward Pass: <br>
+(0 1 2 4 2 5 8) ? (0 1 2 2 4 5 8), Swap since 4 > 2<br>
 
 Now, the array is already sorted, but our algorithm doesn’t know if it is completed. The algorithm needs to complete this whole pass without any swap to know it is sorted.
- 
-(0 1 2 2 4 5 8) ? (0 1 2 2 4 5 8) 
-(0 1 2 2 4 5 8) ? (0 1 2 2 4 5 8)
-
+ <br>
+(0 1 2 2 4 5 8) ? (0 1 2 2 4 5 8) <br>
+(0 1 2 2 4 5 8) ? <br>(0 1 2 2 4 5 8)
+<br>
 ## Analysis-Cocktail sort
-### Complexity
+### Complexity<br>
 * Worst case time complexity: Θ(n*n)
-* Average case time complexity: Θ(n*n)
-* Best case time complexity: Θ(n)
+* Aver<br>age case time complexity: Θ(n*n)
+* Best case time complexity: Θ(n)<br>
 * Space complexity: Θ(1)
 
 ### Comparison with bubble sort
 1.Time complexities are same, but Cocktail performs better than Bubble Sort. Typically cocktail sort is less than two times faster than bubble sort.
-	<br>
+	<b<br>r>
 2.As the cocktail shaker sort goes bidirectional, the range of possible swaps, which is the range to be tested, will reduce per pass, thus reducing the overall running time slightly. For instance :- (2, 3, 4, 5, 1) Bubble sort requires four traversals of array for this example, while Cocktail sort requires only two traversals.
 
 
