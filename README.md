@@ -1,5 +1,5 @@
-#Cocktail sort
-*Cocktail sort, also known as bidirectional bubble sort.
+# Cocktail sort
+* Cocktail sort, also known as bidirectional bubble sort.
 *cocktail sort, shaker sort (which can also refer to a variant of selection sort), ripple sort, shuffle sort, or shuttle sort,
 *It is an extension of the Bubble Sort. The algorithm extends bubble sort by operating in two directions. While it improves on bubble sort by more quickly moving items to the beginning of the list, it provides only marginal performance improvements.
 ##Algorithm-Cocktail sort
