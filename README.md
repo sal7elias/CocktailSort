@@ -128,14 +128,14 @@ Now, the array is already sorted, but our algorithm doesn’t know if it is comp
 ## Analysis-Cocktail sort
 ### Complexity<br>
 * Worst case time complexity: Θ(n*n)
-* Aver<br>age case time complexity: Θ(n*n)
+* Average case time complexity: Θ(n*n)
 * Best case time complexity: Θ(n)<br>
 * Space complexity: Θ(1)
 
 ### Comparison with bubble sort
 1.Time complexities are same, but Cocktail performs better than Bubble Sort. Typically cocktail sort is less than two times faster than bubble sort.
-	<b<br>r>
-2.As the cocktail shaker sort goes bidirectional, the range of possible swaps, which is the range to be tested, will reduce per pass, thus reducing the overall running time slightly. For instance :- (2, 3, 4, 5, 1) Bubble sort requires four traversals of array for this example, while Cocktail sort requires only two traversals.
+	<br>
+2.As the cocktail shaker sort goes bidirectional, the range of possible swaps, which is the range to be tested, will reduce per pass, thus reducing the overall running time slightly.<br> For instance :- (2, 3, 4, 5, 1) Bubble sort requires four traversals of array for this example, while Cocktail sort requires only two traversals.
 
 
 
