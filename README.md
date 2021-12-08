@@ -3,25 +3,25 @@
 * Cocktail sort, shaker sort (which can also refer to a variant of selection sort), ripple sort, shuffle sort, or shuttle sort,
 * It is an extension of the Bubble Sort. The algorithm extends bubble sort by operating in two directions. While it improves on bubble sort by more quickly moving items to the beginning of the list, it provides only marginal performance improvements.
 ## Algorithm-Cocktail sort
-## Each iteration of the algorithm is broken up into two stages: 
+### Each iteration of the algorithm is broken up into two stages: 
 1.The first stage loops through the array from left to right, just like the Bubble Sort. During the loop, adjacent items are compared and if value on the left is greater than the value on the right, then values are swapped. At the end of first iteration, largest number will reside at the end of the array.
 <br>
 2.The second stage loops through the array in opposite direction- starting from the item just before the most recently sorted item, and moving back to the start of the array. Here also, adjacent items are compared and are swapped if required.
 
 
-# Implementation-Cocktail Sort
+## Implementation-Cocktail Sort
 
-#include <iostream>
-using namespace std;>
+<br>
+#include<iostream>
 using namespace std;
-
-// Sorts arrar a[0..n-1] using Cocktail sort
+using namespace std;
+//Sorts arrar a[0..n-1] using Cocktail sort
 void CocktailSort(int a[], int n)
 {
 	bool swapped = true;
 	int start = 0;
 	int end = n - 1;
-
+	
 	while (swapped) {
 		// reset the swapped flag on entering
 		// the loop, because it might be true from
@@ -87,7 +87,7 @@ int main()
 
 
 
-Output: 
+### Output: 
 -199 -52 2 3 33 56 99 100 177 200 
 	
  
@@ -126,10 +126,10 @@ Now, the array is already sorted, but our algorithm doesn’t know if it is comp
 
 ## Analysis-Cocktail sort
 ### Complexity
-*Worst case time complexity: Θ(n*n)
-*Average case time complexity: Θ(n*n)
-*Best case time complexity: Θ(n)
-*Space complexity: Θ(1)
+* Worst case time complexity: Θ(n*n)
+* Average case time complexity: Θ(n*n)
+* Best case time complexity: Θ(n)
+* Space complexity: Θ(1)
 
 ### Comparison with bubble sort
 1.Time complexities are same, but Cocktail performs better than Bubble Sort. Typically cocktail sort is less than two times faster than bubble sort.
